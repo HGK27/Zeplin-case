@@ -1,13 +1,30 @@
 "use client";
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import "./Header.scss";
 import Logo from "@/assets/images/LogoGroup.png";
 import Image from "next/image";
 import Link from "next/link";
 import NavbarMenu from "../../molecules/NavbarMenu/NavbarMenu";
 import MessageIcon from "@/components/icons/MessageIcon";
+import MenuIcon from "@/components/icons/MenuIcon";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+      document.body.classList.add("open-sidebar");
+    } else {
+      document.body.classList.remove("no-scroll");
+      document.body.classList.add("close-sidebar");
+    }
+  }, [isOpen]);
+
   return (
     <header className="header">
       <div className="header-column">
@@ -38,6 +55,9 @@ export default function Header() {
             </div>
           </div>
           <NavbarMenu />
+          <div className="menu-icon" onClick={toggleMenu}>
+            <MenuIcon />
+          </div>
         </div>
       </div>
     </header>

@@ -52,3 +52,96 @@
         }
     }
 }
+
+@media screen and (max-width: 1440px) {
+    blog-section {
+        margin-top: 100px;
+
+        &__content {
+            padding-left: 10px;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .magazine-showcase {
+
+        width: auto;
+
+        &__card {
+            position: relative;
+            z-index: 2;
+        }
+
+        &__image-container {
+            perspective: 1000px;
+
+            .magazine-showcase__img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+        }
+
+        &__footer {
+            margin: 16px 0 1px;
+            gap: 0.7rem;
+
+            .btn--primary {
+                padding: 20px 20px;
+            }
+
+            .btn--outline {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .blog-section {
+        margin-top: 80px;
+
+
+    }
+
+    .magazine-showcase {
+        width: 100%;
+
+        &__footer {
+            flex-direction: column;
+            align-items: stretch;
+
+            .btn--primary,
+            .btn--outline {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .blog-section {
+        margin-top: 60px;
+
+        &__header {
+            position: relative;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+
+            .carousel_view-all {
+                position: absolute;
+                top: 0px;
+                right: 5px;
+            }
+        }
+    }
+}

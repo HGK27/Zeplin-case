@@ -79,7 +79,7 @@
 }
 
 /* --- TABLET / SMALL DESKTOP (990px ve Altı) --- */
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 992px) {
   :root {
     --font-size-h1: 28px;
     --line-height-h1: 34px;

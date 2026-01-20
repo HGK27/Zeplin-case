@@ -110,10 +110,30 @@
     }
 }
 
-// Mobil uyumluluk
-@media (max-width: 768px) {
+
+
+@media screen and (max-width: 1440px) {
+    .magazine-card {
+        max-width: 100%;
+        height: auto;
+
+        .card-image {
+            width: 220px;
+            margin-left: -20px;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
     .magazine-card {
         border-radius: 20px;
+
+        .col-sm-5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         .card-footer {
             justify-content: center;

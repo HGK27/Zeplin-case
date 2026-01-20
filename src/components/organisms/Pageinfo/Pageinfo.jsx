@@ -9,7 +9,7 @@ export default function Pageinfo() {
   return (
     <div className="container">
       <div className="pageinfo">
-        <div className="pageinfo_right">
+        <div className="pageinfo_left">
           <TitleGroup
             subtitle="Dergi Amacı ve Kapsamı"
             title="Profuture Teknoloji Dergisi"
@@ -25,7 +25,7 @@ export default function Pageinfo() {
             Detay
           </Button>
         </div>
-        <div className="pageinfo_left">
+        <div className="pageinfo_right">
           <Image
             src={dergison}
             alt="Dergi Son Sayı"

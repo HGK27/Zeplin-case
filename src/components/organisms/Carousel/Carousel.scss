@@ -71,3 +71,22 @@
 .carousel_main .swiper {
     padding-bottom: 10px;
 }
+
+@media screen and (max-width: 720px) {
+    .carousel {
+        .carousel-header {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .carousel_view-all {
+            position: absolute;
+            top: 0;
+            right: 5px;
+        }
+
+        .carousel_controller {
+            margin-left: 0;
+        }
+    }
+}

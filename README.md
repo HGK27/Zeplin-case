@@ -3,5 +3,5 @@ The main goal is to convert a given UI design into a clean, responsive, and main
 
 To run the project locally, follow these steps:
 
-npm install
+npm install,
 npm run dev

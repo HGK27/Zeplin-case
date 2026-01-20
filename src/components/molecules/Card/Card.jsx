@@ -21,10 +21,10 @@ export default function Card({
   return (
     <div className="card magazine-card">
       <div className="row g-0">
-        <div className="col-md-5">
+        <div className="col-sm-5">
           <Image src={cardImage} className="card-image" alt="Magazine Cover" />
         </div>
-        <div className="col-md-7">
+        <div className="col-sm-7">
           <div className="card-header">
             <div className="card-icon">
               <PdfIcon />

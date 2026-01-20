@@ -10,7 +10,6 @@ import HomeIcon from "@/components/icons/HomeIcon";
 export default function NavbarMenu() {
   return (
     <div className="NavbarMenu">
-      {/* MOBILE TOGGLE */}
       <button className="home-button">
         <HomeIcon />
       </button>

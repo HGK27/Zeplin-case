@@ -5,7 +5,9 @@
     overflow: hidden;
     z-index: 1;
 
-
+    .menu-icon {
+        display: none;
+    }
 
     .header-column {
         position: relative;
@@ -83,5 +85,33 @@
             }
         }
     }
+}
 
+@media (max-width: 1440px) {
+    .header {
+        height: 120px;
+
+        .menu-icon {
+            display: block;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            z-index: 10;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .header {
+        .header-column {
+
+            .headerRight {
+
+                .headerInfo {
+                    display: none;
+                }
+            }
+        }
+    }
 }
