@@ -1,0 +1,87 @@
+.header {
+    position: relative;
+    height: 135px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+
+
+
+    .header-column {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .headerBrand {
+            position: relative;
+            z-index: 9;
+
+            .brandContent {
+                width: 381px;
+                height: 100%;
+                position: relative;
+
+                border-radius: 0 100% 0 0;
+            }
+        }
+
+        .headerRight {
+            position: relative;
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .headerInfo {
+                background: var(--color-primary-navy);
+                color: #fff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 44px;
+                padding-right: 20px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -50px;
+                    top: 0;
+                    bottom: 0;
+                    width: 50px;
+                    height: 44px;
+                    background-color: var(--color-primary-navy); // Kartın arka plan rengiyle aynı olmalı
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -160px;
+                    top: -12px;
+                    width: 175px;
+                    height: 175px;
+                    background-color: white; // Kartın arka plan rengiyle aynı olmalı
+                    border-radius: 50%; // Bu yuvarlaklık kavisi oluşturur
+                }
+
+                .headerInfo-left {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 16px;
+
+                    span {
+                        margin-left: 6px;
+                    }
+                }
+
+                .headerInfo-right {
+                    span {
+                        margin-right: 20px;
+                    }
+
+                }
+            }
+        }
+    }
+
+}

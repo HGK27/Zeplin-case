@@ -1,0 +1,102 @@
+.footer {
+    background-color: #161F3C;
+    color: #ffffff;
+    padding-top: 65px;
+    margin-top: 137px;
+
+    &__top {
+        padding-bottom: 20px;
+    }
+
+    &__icon-circle {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 1px solid var(--color-gray-400);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    &__info {
+        .footer__label {
+            display: block;
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 2px;
+        }
+
+        .footer__value {
+            font-weight: 700;
+            margin-bottom: 2px;
+            font-size: 16px;
+        }
+
+        .footer__link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            svg {
+                fill: var(--color-secondary-red);
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        .footer__text {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+    }
+
+    &__divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 18px 0 36px;
+    }
+
+    &__disclaimer {
+        text-align: center;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 300;
+        color: #ffff;
+        width: 100%;
+        margin-bottom: 30px;
+
+        p {
+            margin: 0;
+            line-height: 22px;
+        }
+    }
+
+    &__bottom-bar {
+        background-color: #DB0D15; // Canlı kırmızı şerit
+        text-align: center;
+        padding: 10px 0;
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+// Responsive düzenleme
+@media (max-width: 768px) {
+    .footer {
+        &__top {
+            text-align: center;
+
+            .d-flex {
+                flex-direction: column;
+                align-items: center !important;
+            }
+        }
+    }
+}

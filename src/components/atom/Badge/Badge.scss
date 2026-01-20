@@ -1,0 +1,45 @@
+.badge-atom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+    white-space: nowrap;
+
+    // Boyutlar
+    &--sm {
+        padding: 1px 8px;
+        font-size: 12px;
+    }
+
+    &--md {
+        padding: 3px 10px;
+        font-size: 14px;
+    }
+
+    &--lg {
+        padding: 5px 12px;
+        font-size: 16px;
+    }
+
+    // Varyantlar
+    &--default {
+        background-color: #F6F8FF;
+        color: var(--color-primary-navy);
+        border-radius: 8px;
+    }
+
+    &--info {
+        background-color: var(--color-primary-cyan);
+        color: #ffffff;
+        border-radius: 15px;
+
+    }
+
+    &--primary {
+        background-color: var(--color-primary-blue);
+        color: #ffffff;
+        border-radius: 8px;
+
+    }
+}

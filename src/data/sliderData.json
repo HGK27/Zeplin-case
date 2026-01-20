@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "imageAlt": "Profuture Teknoloji Dergisi",
+    "title": "Son Sayı Yayında",
+    "titleTag": "h1",
+    "subtitle": "Profuture Teknoloji Dergisi",
+    "desc": "Protufure teknoloji mekanizmaları değişikliği alanlarında özgün akademik çalışmalar içeren yeni sayıya şimdi erişin.",
+    "bookmark": "2",
+    "number": "7",
+    "date": "Haziran 2025"
+  },
+  {
+    "id": 2,
+    "imageAlt": "Yeni Sayı",
+    "title": "Akademik Yayınlar",
+    "titleTag": "h2",
+    "subtitle": "Yeni Makaleler ve İçerikler",
+    "desc": "Güncel teknoloji, yapay zeka ve dijital dönüşüm konularında yayınlanan yeni çalışmalar.",
+    "bookmark": "1",
+    "number": "15",
+    "date": "Temmuz 2025"
+  }
+]

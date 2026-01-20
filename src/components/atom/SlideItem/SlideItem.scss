@@ -1,0 +1,73 @@
+.heroSlide {
+    position: relative;
+    height: 615px;
+    overflow: hidden;
+
+    &__image {
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    &__overlay {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        margin-top: 132px;
+
+        h1,
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-h2);
+        font-weight: bold;
+        display: block;
+    }
+
+    &__title {
+        font-size: var(--font-size-h1);
+        line-height: var(--line-height-h1);
+        font-weight: 600;
+        display: block;
+    }
+
+    &__desc {
+        font-size: var(--font-size-text-md);
+        line-height: var(--line-height-text-md);
+        margin-bottom: 20px;
+        max-width: 400px;
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    &__meta {
+        display: flex;
+        font-size: var(--font-size-text-meta);
+        margin-bottom: 24px;
+        margin-bottom: 48px;
+
+        span {
+            display: flex;
+            align-items: center;
+            margin-right: 26px;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+
+            svg {
+                margin-right: 7px;
+                flex-shrink: 1;
+                position: relative;
+                left: -1px;
+                top: -1px;
+            }
+
+            strong {
+                margin-left: 5px;
+                font-weight: 600;
+            }
+        }
+    }
+}

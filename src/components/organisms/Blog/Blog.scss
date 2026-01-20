@@ -1,0 +1,54 @@
+.blog-section {
+    margin-top: 130px;
+
+    &__content {
+        padding-left: 10px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+.magazine-showcase {
+    position: relative;
+    overflow: hidden;
+    width: 466px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #FFD9DA;
+    border-radius: 25px;
+    padding: 7px 10px;
+
+    &__card {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__image-container {
+        perspective: 1000px;
+
+        .magazine-showcase__img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+
+    &__footer {
+        margin: 16px 0 1px;
+        gap: 0.7rem;
+
+        .btn--primary {
+            padding: 20px 20px;
+        }
+
+        .btn--outline {
+            width: 55px;
+            height: 55px;
+        }
+    }
+}

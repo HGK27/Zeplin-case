@@ -1,0 +1,118 @@
+:root {
+  /* Primary */
+  --color-primary-blue: #273d89;
+  --color-primary-navy: #112053;
+  --color-primary-cyan: #00c3d0;
+
+  /* Secondary */
+  --color-secondary-red: #db0d15;
+  --color-secondary-orange: #de8536;
+  --color-secondary-green: #a8b95e;
+
+  /* Neutral / Gray Scale */
+  --color-gray-900: #2a2c31;
+  --color-gray-700: #676a73;
+  --color-gray-400: #acb1c6;
+
+  /* Background */
+  --color-bg-light: #fbf6e3;
+  --color-bg-info: #c6ecff;
+
+  /* Stroke / Border */
+  --color-stroke: #acb1c6;
+
+  /* Font weight tokens */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* H1 - 32px font-size / 38px line height */
+  --font-size-h1: 32px;
+  --line-height-h1: 38px;
+
+  /* H2 - 28px font-size / 36px line height */
+  --font-size-h2: 28px;
+  --line-height-h2: 36px;
+
+  /* H3 - 26px font-size / 32px line height */
+  --font-size-h3: 26px;
+  --line-height-h3: 32px;
+
+  /* H4 - 24px font-size / 30px line height */
+  --font-size-h4: 24px;
+  --line-height-h4: 30px;
+
+  /* H5 - 22px font-size / 28px line height */
+  --font-size-h5: 22px;
+  --line-height-h5: 28px;
+
+  /* H6 - 20px font-size / 26px line height */
+  --font-size-h6: 20px;
+  --line-height-h6: 26px;
+
+  /* Text */
+  --font-size-text-meta: 16px;
+  --font-size-text-sm: 17px;
+  --font-size-text-md: 18px;
+
+  /* Line heights */
+  --line-height-text-sm: 24px;
+  --line-height-text-md: 25px;
+
+  /* Subtitle */
+  --font-size-subtitle-sm: 22px;
+  --font-size-subtitle-lg: 28px;
+
+  /* Card */
+  --font-size-card-text: 20px;
+  
+  
+}
+/* --- XL & XXL BREAKPOINT (1440px ve Altı) --- */
+@media screen and (max-width: 1440px) {
+  :root {
+    --font-size-h1: 30px;
+    --font-size-subtitle-lg: 26px;
+  }
+}
+
+/* --- TABLET / SMALL DESKTOP (990px ve Altı) --- */
+@media screen and (max-width: 990px) {
+  :root {
+    --font-size-h1: 28px;
+    --line-height-h1: 34px;
+    --font-size-h2: 26px;
+    --line-height-h2: 32px;
+    --font-size-h3: 24px;
+    --line-height-h3: 30px;
+    --font-size-h4: 22px;
+    --font-size-h5: 20px;
+    --font-size-h6: 18px;
+
+    --font-size-text-md: 17px;
+    --font-size-subtitle-lg: 24px;
+    --font-size-card-text: 18px;
+  }
+}
+
+/* --- MOBILE / SMALL TABLET (720px ve Altı) --- */
+@media screen and (max-width: 720px) {
+  :root {
+    --font-size-h1: 24px;
+    --line-height-h1: 30px;
+    --font-size-h2: 22px;
+    --line-height-h2: 28px;
+    --font-size-h3: 20px;
+    --line-height-h3: 26px;
+    --font-size-h4: 18px;
+    --font-size-h5: 17px;
+    --font-size-h6: 16px;
+
+    --font-size-text-sm: 15px;
+    --font-size-text-meta: 14px;
+    --font-size-subtitle-lg: 20px;
+    --font-size-card-text: 16px;
+  }
+}

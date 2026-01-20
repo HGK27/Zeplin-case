@@ -1,0 +1,82 @@
+.cookie-banner-wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 850px;
+    z-index: 9999;
+    animation: slideUp 0.5s ease-out;
+}
+
+.cookie-banner {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 50px; // Tam yuvarlak kenarlar
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+
+    &__icon {
+        background: #f0f4f8;
+        color: #2b3a67;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: #4b5563;
+        line-height: 1.5;
+
+        a {
+            color: #3b82f6;
+            text-decoration: underline;
+        }
+    }
+
+    .btn-decline {
+        background: #f3f4f6;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151;
+        transition: background 0.2s;
+
+        &:hover {
+            background: #e5e7eb;
+        }
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+// Mobilde düzenleme
+@media (max-width: 768px) {
+    .cookie-banner {
+        flex-direction: column;
+        border-radius: 20px;
+        text-align: center;
+        gap: 15px;
+
+        &__icon {
+            display: none;
+        }
+    }
+}

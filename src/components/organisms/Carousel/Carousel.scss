@@ -1,0 +1,73 @@
+.carousel {
+    .carousel-header {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .carousel_view-all {
+        margin-left: auto;
+    }
+
+    .carousel_controller {
+        display: flex;
+        gap: 12px; // Butonlar arasındaki boşluk
+        align-items: center;
+        margin-left: 60px;
+
+        .carousel_button {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            // İkonun boyutu ve rengi
+            svg {
+                width: 16px;
+                height: 16px;
+                transition: color 0.3s ease;
+            }
+
+
+            &--left {
+                background-color: #f0f3f8;
+                color: #acb1c6;
+
+                svg {
+                    transform: rotate(180deg);
+                }
+
+                &:hover {
+                    background-color: darken(#f0f3f8, 3%);
+                }
+            }
+
+            &--right {
+                background-color: #f0f3f8;
+                color: #2b3a67;
+
+                &:hover {
+                    background-color: #e2e8f0;
+                    color: darken(#2b3a67, 10%);
+                }
+            }
+
+            // Tıklama efekti
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+}
+
+.carousel_main {
+    position: relative;
+}
+
+.carousel_main .swiper {
+    padding-bottom: 10px;
+}

@@ -1,0 +1,122 @@
+.magazine-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    max-width: 465px;
+    height: 320px;
+    padding: 0;
+    border: 1px solid #E9F4F8;
+
+    .card-image {
+        width: 285px;
+        height: auto;
+        max-width: none;
+        margin-left: -32px;
+        margin-top: 18px;
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    .card-header {
+        background: transparent;
+        border: none;
+        padding: 15px 28px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .card-new-badge {
+            margin-top: -7px;
+            position: relative;
+            left: 3px;
+        }
+    }
+
+    .card-body {
+        padding: 0 30px;
+        position: relative;
+        margin-bottom: 42px;
+
+        .card-badge {
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            color: #2b3a67; // Görseldeki koyu lacivert
+            font-size: var(--font-size-h6); // 20px
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .text-secondary {
+            font-size: 16px;
+            color: #333 !important; // Görselde metinler oldukça okunaklı
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                strong {
+                    color: #000;
+                    font-weight: var(--font-bold);
+                }
+            }
+
+            svg {
+                color: #2b3a67; // İkonların rengi
+            }
+        }
+    }
+
+    // Footer kısmındaki butonların dizilimi
+    .card-footer {
+        background: transparent;
+        border: none;
+        padding: 0 30px;
+        display: flex;
+        justify-content: flex-end; // Butonları sağa yasla
+        gap: 12px;
+
+        .btn--outline {
+            border-color: #d1d9e6;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: #f8f9fa;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    // Sol taraftaki görselin stili
+    .img-fluid {
+        border-radius: 20px; // Görselin kendi iç yuvarlaklığı
+        object-fit: cover;
+        height: 100%;
+        min-height: 220px;
+    }
+}
+
+// Mobil uyumluluk
+@media (max-width: 768px) {
+    .magazine-card {
+        border-radius: 20px;
+
+        .card-footer {
+            justify-content: center;
+        }
+    }
+}

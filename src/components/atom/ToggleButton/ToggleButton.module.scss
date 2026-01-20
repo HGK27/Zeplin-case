@@ -1,0 +1,25 @@
+.toggleButton {
+  border: 1px solid $color-primary-blue;
+  background-color: transparent;
+  color: $color-primary-blue;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: rgba(39, 61, 137, 0.08);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+    color: #9ca3af;
+    cursor: not-allowed;
+  }
+}
+
+.active {
+  background-color: $color-primary-blue;
+  color: #fff;
+}

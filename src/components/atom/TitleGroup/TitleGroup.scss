@@ -1,0 +1,16 @@
+.titleGroup {
+    .section_subtitle {
+        margin-bottom: 12px;
+        font-size: var(--font-size-h5);
+        line-height: 25px;
+        color: var(--color-gray-700);
+    }
+
+    .section_title {
+        margin-bottom: 13px;
+        font-size: var(--font-size-h2);
+        line-height: 25px;
+        color: var(--color-primary-blue);
+        font-weight: 600;
+    }
+}
