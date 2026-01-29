@@ -5,3 +5,9 @@
 /* Proje stilleri */
 @import "../styles/reset";
 @import "../styles/font";
+
+@media (max-width: 720px) {
+    .container {
+        padding: 0 10px;
+    }
+}

@@ -70,9 +70,21 @@
                     display: flex;
                     align-items: center;
                     margin-left: 16px;
+                    transition: .3s;
 
-                    span {
+                    a {
+                        color: #fff;
                         margin-left: 6px;
+                        transition: .3s;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #9aa2bd;
+
+                        a {
+                            color: #9aa2bd;
+                        }
                     }
                 }
 
@@ -102,9 +114,84 @@
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width:1200px) {
     .header {
         .header-column {
+            .headerRight {
+                .headerInfo {
+                    .headerInfo-left {
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                            position: relative;
+                            top: 2px;
+                        }
+
+                        span {
+                            margin-left: 4px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .headerInfo-right {
+                        span {
+                            margin-right: 10px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .header {
+        .menu-icon {
+            top: 80px;
+        }
+
+        .header-column {
+            .headerRight {
+                .headerInfo {
+                    height: 66px;
+
+                    .headerInfo-right {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .header {
+        height: 80px;
+        background: #273D89;
+
+        .menu-icon {
+            top: 30px;
+            color: #fff;
+        }
+
+        .header-column {
+            .headerBrand {
+                position: relative;
+                z-index: 9;
+
+                .brandContent {
+                    width: 80px;
+                    position: relative;
+                    border-radius: 0 100% 0 0;
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
 
             .headerRight {
 

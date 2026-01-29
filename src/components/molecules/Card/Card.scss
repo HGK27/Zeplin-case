@@ -89,15 +89,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            &:hover {
-                background-color: #f8f9fa;
-            }
-
-            svg {
-                width: 20px;
-                height: 20px;
-            }
         }
     }
 
@@ -121,6 +112,15 @@
             width: 220px;
             margin-left: -20px;
             margin-top: 10px;
+        }
+
+        .card-footer {
+            margin-bottom: 20px;
+
+            .btn--outline {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 }

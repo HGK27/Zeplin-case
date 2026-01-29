@@ -11,7 +11,9 @@ export default function NavbarMenu() {
   return (
     <div className="NavbarMenu">
       <button className="home-button">
-        <HomeIcon />
+        <Link href="/" className="home-link">
+          <HomeIcon />
+        </Link>
       </button>
 
       {/* MENU */}

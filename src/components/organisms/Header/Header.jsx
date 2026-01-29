@@ -4,14 +4,17 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "./Header.scss";
 import Logo from "@/assets/images/LogoGroup.png";
+import MobileLogo from "@/assets/images/mobile-logo.webp";
 import Image from "next/image";
 import Link from "next/link";
 import NavbarMenu from "../../molecules/NavbarMenu/NavbarMenu";
 import MessageIcon from "@/components/icons/MessageIcon";
 import MenuIcon from "@/components/icons/MenuIcon";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 720px)");
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -32,7 +35,11 @@ export default function Header() {
           <div className="brandContent">
             {/* LOGO */}
             <Link className="headerLogo" href="/">
-              <Image src={Logo} alt="Profuture"></Image>
+              <Image
+                src={isMobile ? MobileLogo : Logo}
+                alt="Profuture"
+                priority
+              />
             </Link>
           </div>
         </div>
@@ -40,7 +47,7 @@ export default function Header() {
           <div className="headerInfo">
             <div className="headerInfo-left">
               <MessageIcon size={18} />
-              <span>profuture@gmail.com</span>
+              <a href="mailto:profuture@gmail.com">profuture@gmail.com</a>
             </div>
             <div className="headerInfo-right">
               <span>
