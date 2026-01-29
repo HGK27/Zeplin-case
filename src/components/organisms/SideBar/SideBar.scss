@@ -1,50 +1,53 @@
-body.no-scroll {
-    overflow: hidden; // Sidebar açıkken arka sayfa kaymaz
-}
-
-.sidebar {
+.mobileSidebar {
     position: fixed;
     top: 0;
-    right: -300px; // Kapalıyken ekranın dışında
-    width: 300px;
+    right: 0;
     height: 100vh;
+    width: 82%;
+    max-width: 320px;
     background: #fff;
-    z-index: 1000;
-    transition: right 0.3s ease-in-out;
-    padding: 2rem;
+    z-index: 60;
 
-    &.open {
-        right: 0; // Açıkken içeri girer
+    transform: translateX(110%);
+    transition: transform 250ms ease;
+
+    &.isOpen {
+        transform: translateX(0);
     }
 
-    .sidebar-nav {
+    &__top {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 40px;
-
-        a {
-            text-decoration: none;
-            color: #000;
-            font-size: 1.1rem;
-        }
+        justify-content: flex-end;
+        padding: 16px;
     }
 }
 
-.sidebar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 999;
+.closeBtn {
+    border: 0;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
 }
 
-@media (min-width: 1440px) {
+.mobileMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0 16px 24px;
+}
 
-    .sidebar,
-    .sidebar-overlay {
-        display: none; // Geniş ekranlarda sidebar ve overlay gizlenir
+.mobileMenuLink {
+    display: block;
+    padding: 12px 8px;
+    text-decoration: none;
+    color: #111;
+}
+
+.sidebarButtonGroup {
+    position: relative;
+    max-width: 240px;
+    margin-left: 28px;
+
+    .SideBarSearchBox {
+        border-radius: 999px;
     }
 }

@@ -11,6 +11,8 @@ import NavbarMenu from "../../molecules/NavbarMenu/NavbarMenu";
 import MessageIcon from "@/components/icons/MessageIcon";
 import MenuIcon from "@/components/icons/MenuIcon";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import Overlay from "@/components/atom/Overlay/Overlay";
+import Sidebar from "@/components/organisms/Sidebar/SideBar";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,52 +23,55 @@ export default function Header() {
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("no-scroll");
-      document.body.classList.add("open-sidebar");
     } else {
       document.body.classList.remove("no-scroll");
-      document.body.classList.add("close-sidebar");
     }
   }, [isOpen]);
 
   return (
-    <header className="header">
-      <div className="header-column">
-        <div className="headerBrand">
-          <div className="brandContent">
-            {/* LOGO */}
-            <Link className="headerLogo" href="/">
-              <Image
-                src={isMobile ? MobileLogo : Logo}
-                alt="Profuture"
-                priority
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="headerRight">
-          <div className="headerInfo">
-            <div className="headerInfo-left">
-              <MessageIcon size={18} />
-              <a href="mailto:profuture@gmail.com">profuture@gmail.com</a>
-            </div>
-            <div className="headerInfo-right">
-              <span>
-                ISSN: <b>345-255</b>
-              </span>
-              <span>
-                Başlangıç: <b>2025 </b>
-              </span>
-              <span>
-                Periyot: <b>Yılda 2 Sayı</b>
-              </span>
+    <>
+      <header className="header">
+        <div className="header-column">
+          <div className="headerBrand">
+            <div className="brandContent">
+              {/* LOGO */}
+              <Link className="headerLogo" href="/">
+                <Image
+                  src={isMobile ? MobileLogo : Logo}
+                  alt="Profuture"
+                  priority
+                />
+              </Link>
             </div>
           </div>
-          <NavbarMenu />
-          <div className="menu-icon" onClick={toggleMenu}>
-            <MenuIcon />
+          <div className="headerRight">
+            <div className="headerInfo">
+              <div className="headerInfo-left">
+                <MessageIcon size={18} />
+                <a href="mailto:profuture@gmail.com">profuture@gmail.com</a>
+              </div>
+              <div className="headerInfo-right">
+                <span>
+                  ISSN: <b>345-255</b>
+                </span>
+                <span>
+                  Başlangıç: <b>2025 </b>
+                </span>
+                <span>
+                  Periyot: <b>Yılda 2 Sayı</b>
+                </span>
+              </div>
+            </div>
+            <NavbarMenu />
+            <div className="menu-icon" onClick={toggleMenu}>
+              <MenuIcon />
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <Overlay isOpen={isOpen} onClose={toggleMenu} />
+      <Sidebar isOpen={isOpen} onClose={toggleMenu} />
+    </>
   );
 }
